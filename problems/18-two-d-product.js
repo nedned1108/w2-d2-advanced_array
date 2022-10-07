@@ -24,10 +24,32 @@ let arr2 = [
 console.log(twoDimensionalProduct(arr2)); // 88
 
 */
+// 1. takes in a 2D array of numbers as an arg
+// 2. return the total product of all numbers multiplied together;
 
-let twoDimensionalProduct = function(arr) {
-    // Your code here
+let twoDimensionalProduct = function(arr) {  
+  let product = 1;
+  arr.forEach((arrNum) => {
+    arrNum.forEach((num) => {
+      product *= num;
+    }) 
+  });
+  return product;
 };
+
+let arr1 = [
+  [6, 4],
+  [5],
+  [3, 1]
+];
+console.log(twoDimensionalProduct(arr1)); // 360
+
+let arr2 = [
+  [11, 4],
+  [2]
+];
+console.log(twoDimensionalProduct(arr2)); // 88
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
